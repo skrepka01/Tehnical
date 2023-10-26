@@ -1,12 +1,18 @@
 package ry.tehnical;
 
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import ry.tehnical.listener.ResponseConnect;
+import ry.tehnical.registration.Registration;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public final class BuildYourCity extends JavaPlugin {
 
+    // todo: продолжить создавать головы боллов (navigatorBosses)
+    public static BuildYourCity instance;
+    private final Registration registration = new Registration();
     /**
      * Суть данного режима заключается в том,что...
      * Игрок спавниться в опеределённом месте и ему нужно победить боссов.
@@ -18,8 +24,8 @@ public final class BuildYourCity extends JavaPlugin {
      */
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        instance = this;
+        registration.registerEvents();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package ry.tehnical.items.item_for_inventory_entity;
+package ry.tehnical.items.itemForInventoryEntity;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
